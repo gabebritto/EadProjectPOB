@@ -34,7 +34,7 @@ public class Professor extends Pessoa {
 	
 	@Override
 	public String toString() {
-		String texto="CPF: " + getCpf() + " Nome: " + getNome() + " Salário: " + getSalario()
+		String texto="CPF: " + getCpf() + " Nome: " + getNome() + " Salário: " + getSalario();
 		if (aulas_professor.isEmpty())
 			texto += "Sem Aulas";
 		else 	

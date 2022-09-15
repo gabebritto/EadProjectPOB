@@ -4,24 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Curso{
-	private int id;
 	private String nome;
 	private int preco;
-	
 	private List<Aluno> curso_alunos = new ArrayList<>();
+	private List<Modulo> curso_modulos = new ArrayList<>();
 		
-	public Curso(int id, String nome, int preco) {
-		this.id = id;
+	public Curso(String nome, int preco) {
 		this.nome = nome;
 		this.preco = preco;
-	}
-
-	public int getId() {
-		return id;
-	}
-	
-	public int setId(int novoId) {
-		return id = novoId;
 	}
 	
 	public String getNome() {
@@ -36,6 +26,10 @@ public class Curso{
 		return preco;
 	}
 	
+	public List<Modulo> getModulos(){
+		return curso_modulos;
+	}
+	
 	public int setPreco(int novoPreco) {
 		return preco = novoPreco;
 	}
@@ -47,10 +41,27 @@ public class Curso{
 	public void setAlunos(List<Aluno> curso_alunos) {
 		this.curso_alunos = curso_alunos;
 	}
+	
+	public void adicionarModulo(Modulo m) {
+		curso_modulos.add(m);
+	}
+	
+	public void removerModulo() {
+		if (aulas_modulo.isEmpty()) {
+			for (Aula a : aulas_modulo) {
+				if (a.getNome() == nomeAula) {
+					aulas_modulo.remove(a);
+				}
+			}
+		}
+		else {
+			System.out.println("Aula não encontrada!");
+		}
+	}
 
 	@Override
 	public String toString() {
-		String texto = "ID: " + getId() + " Nome: " + getNome() + " Preço: " + getPreco();
+		String texto = " Nome: " + getNome() + " Preço: " + getPreco();
 		if (curso_alunos.isEmpty())
 			texto += "Sem Cursos";
 		else 	

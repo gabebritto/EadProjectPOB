@@ -4,7 +4,7 @@ package modelo;
 import java.util.List;
 
 public class Pessoa {
-	private String cpf;  //autoincremento
+	private String cpf; 
 	private String nome;
 	
 	public Pessoa(String nome, String cpf) {

@@ -1,15 +1,9 @@
 package aplicacao;
-/**********************************
- * IFPB - Curso Superior de Tec. em Sist. para Internet
- * POB - Persistencia de Objetos
- * Prof. Fausto Ayres
- *
- */
 
 import com.db4o.ObjectContainer;
 
-import modelo.Autor;
-import modelo.Livro;
+import modelo.*;
+
 
 
 public class Cadastrar {
@@ -25,13 +19,12 @@ public class Cadastrar {
 	public void cadastrar(){
 		System.out.println("Cadastrando...");
 
-		Livro livro1, livro2, livro3, livro4;
-		Autor autor1,autor2, autor3, autor4;
-
-		autor1= new Autor("joao");
-		autor2= new Autor("maria");
-		autor3= new Autor("paulo");
-		autor4= new Autor("antonio");
+		Aluno aluno1 = new Aluno("pedro", "123", "1000");
+		Professor professor1 = new Professor("João", "150", 2000);
+		
+		Curso curso = new Curso("Java", 1000);
+		Modulo modulo = new Modulo("Primeiro Modulo", curso);
+		Aula aula = new Aula("Aula 1", 10, professor1);
 
 		livro1 = new Livro("java", 10, 2016);
 		livro1.adicionar(autor1);
