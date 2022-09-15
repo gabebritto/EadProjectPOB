@@ -25,42 +25,27 @@ public class Cadastrar {
 		Curso curso = new Curso("Java", 1000);
 		Modulo modulo = new Modulo("Primeiro Modulo", curso);
 		Aula aula = new Aula("Aula 1", 10, professor1);
+		
+		aluno1.adicionarCurso(curso);
+		//Inserir modulo no Curso
+		curso.adicionarModulo(modulo);
+		//Inserir aula no modulo
+		modulo.adicionarAula(aula);
+		//Criar uma View para aula
+		aula.assistirAula(aluno1.getMatricula(), aula.getNome());
 
-		livro1 = new Livro("java", 10, 2016);
-		livro1.adicionar(autor1);
-		livro1.adicionar(autor2);
-
-		livro2 = new Livro("c", 10, 2015);
-		livro2.adicionar(autor1);
-		livro2.adicionar(autor3);
-
-		livro3 = new Livro("php", 10, 2016);
-		livro3.adicionar(autor1);
-		livro3.adicionar(autor4);
-
-		livro4 = new Livro("c#", 10, 2014);		//sem autor
-
-		autor1.adicionar(livro1);
-		autor1.adicionar(livro2);
-		autor1.adicionar(livro3);
-		autor2.adicionar(livro2);
-		autor3.adicionar(livro3);
-
-		//persistir livro1
-		manager.store(livro1);
+		//persistir aluno
+		manager.store(aluno1);
 		manager.commit();
 
-		//persistir livro2
-		manager.store(livro2);
+		//persistir professor
+		manager.store(professor1);
+		manager.commit();	
+	
+		//persistir curso
+		manager.store(curso);
 		manager.commit();
 
-		//persistir livro3
-		manager.store(livro3);
-		manager.commit();	
-
-		//persistir livro4
-		manager.store(livro4);	
-		manager.commit();	
 	}
 
 	//=================================================
