@@ -46,16 +46,16 @@ public class Curso{
 		curso_modulos.add(m);
 	}
 	
-	public void removerModulo() {
-		if (aulas_modulo.isEmpty()) {
-			for (Aula a : aulas_modulo) {
-				if (a.getNome() == nomeAula) {
-					aulas_modulo.remove(a);
+	public void removerModulo(String nomeModulo) {
+		if (!curso_modulos.isEmpty()) {
+			for (Modulo m : curso_modulos) {
+				if (m.getNome() == nomeModulo) {
+					curso_modulos.remove(m);
 				}
 			}
 		}
 		else {
-			System.out.println("Aula não encontrada!");
+			System.out.println("Modulo não encontrado!");
 		}
 	}
 

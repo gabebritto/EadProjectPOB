@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Aluno extends Pessoa {
 	private String matricula;
-	private List<Curso> cursos = new ArrayList<>();
+	private List<Curso> cursos = new ArrayList<Curso>();
 	
 	
 	public Aluno(String nome, String cpf, String matricula) {
@@ -13,19 +13,36 @@ public class Aluno extends Pessoa {
 		this.matricula = matricula;
 	}
 
+	public void adicionarCurso(Curso curso) {
+		cursos.add(curso);
+	}
+
+	public void removerCurso(String cursoNome) {
+		if (!cursos.isEmpty()) {
+			for (Curso c : cursos) {
+				if (c.getNome() == cursoNome) {
+					cursos.remove(c);
+				}
+			}
+		}
+		else {
+			System.out.println("Curso não encontrado!");
+		}
+	}
+
 	public String getMatricula() {
 		return matricula;
 	}
 	
-	public String setMatricula(String novaMatricula) {
-		return matricula = novaMatricula;
+	public void setMatricula(String novaMatricula) {
+		matricula = novaMatricula;
 	}
 	public List<Curso> getCursos() {
 		return cursos;
 	}
 	
-	public List<Curso> setCursos(List<Curso> novosCursos) {
-		return cursos = novosCursos;
+	public void setCursos(List<Curso> novosCursos) {
+		cursos = novosCursos;
 	}
 
 	@Override

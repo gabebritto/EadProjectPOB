@@ -13,13 +13,22 @@ public class Modulo {
 		this.curso = curso;
 		// TODO Auto-generated constructor stub
 	}
+
+	public String getNome() {
+		return nome;
+	}
+	
+	public void setNome(String novoNome) {
+		nome = novoNome;
+	}
+	
 	
 	public void adicionarAula(Aula aula) {
 		aulas_modulo.add(aula);
 	}
 	
 	public void removerAula(String nomeAula) {
-		if (aulas_modulo.isEmpty()) {
+		if (!aulas_modulo.isEmpty()) {
 			for (Aula a : aulas_modulo) {
 				if (a.getNome() == nomeAula) {
 					aulas_modulo.remove(a);
@@ -33,6 +42,10 @@ public class Modulo {
 	
 	public Curso getCurso() {
 		return curso;
+	}
+
+	public void setCurso(Curso novoCurso) {
+		curso = novoCurso; 
 	}
 	
 	@Override

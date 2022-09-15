@@ -1,8 +1,5 @@
 package modelo;
 
-
-import java.util.List;
-
 public class Pessoa {
 	private String cpf; 
 	private String nome;
@@ -17,16 +14,16 @@ public class Pessoa {
 		return nome;
 	}
 	
-	public String setNome(String novoNome) {
-		return nome = novoNome;
+	public void setNome(String novoNome) {
+		nome = novoNome;
 	}
 	
 	public String getCpf() {
 		return cpf;
 	}
 	
-	public String setCpf(String novoCpf) {
-		return cpf = novoCpf;
+	public void setCpf(String novoCpf) {
+		cpf = novoCpf;
 	}
 
 	@Override

@@ -16,8 +16,8 @@ public class Professor extends Pessoa {
 		return salario;
 	}
 	
-	public int setSalario(int novoSalario) {
-		return salario = novoSalario;
+	public void setSalario(int novoSalario) {
+		salario = novoSalario;
 	}
 	
 	public List<Aula> getAulas() {
@@ -28,8 +28,17 @@ public class Professor extends Pessoa {
 		aulas_professor.add(a);
 	}
 	
-	public void removerAulaProfessor(Aula a){
-		aulas_professor.remove(a);
+	public void removerAulaProfessor(String nomeAula){
+		if (!aulas_professor.isEmpty()) {
+			for (Aula a : aulas_professor) {
+				if (a.getNome() == nomeAula) {
+					aulas_professor.remove(a);
+				}
+			}
+		}
+		else {
+			System.out.println("Aula não encontrada!");
+		}
 	}
 	
 	@Override
