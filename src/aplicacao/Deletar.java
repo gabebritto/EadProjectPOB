@@ -11,8 +11,7 @@ import java.util.List;
 import com.db4o.ObjectContainer;
 import com.db4o.query.Query;
 
-import modelo.Autor;
-import modelo.Livro;
+import modelo.*;
 
 
 public class Deletar {
@@ -23,32 +22,29 @@ public class Deletar {
 		apagar();
 		manager.close();
 		
-		System.out.println("\n\n aviso: feche sempre o plugin OME antes de executar aplicação");
+		System.out.println("\n\n aviso: feche sempre o plugin OME antes de executar aplicaï¿½ï¿½o");
 	}
 
 	public void apagar(){
 		Query q = manager.query();
-		q.constrain(Livro.class);  				
-		q.descend("titulo").constrain("java");		 
-		List<Livro> resultados = q.execute(); 
+		q.constrain(Aluno.class);  				
+		q.descend("matricula").constrain("1000");		 
+		List<Aluno> resultados = q.execute(); 
 	
 		if(resultados.size()>0) {
-			Livro livro =  resultados.get(0);
+			Aluno aluno =  resultados.get(0);
 			
-			//remover manualmente o relacionamento dos autores para livro java
-			for(Autor a : livro.getAutores()) {
-				a.remover(livro);
-				manager.store(a);
-				if(a.getLivros().isEmpty())
-					manager.delete(a);	//apagar o autor caso esteja orfão
+			for(Curso c : aluno.getCursos()) {
+				c.removerAluno(aluno);
+				manager.store(c);
 			}
 			
-			manager.delete(livro);
+			manager.delete(aluno);
 			manager.commit();
-			System.out.println("apagou livro");
+			System.out.println("apagou Aluno");
 		}
 		else
-			System.out.println("maria inexistente");
+			System.out.println("Aluno de matricula 1000 inexistente.");
 	}
 
 

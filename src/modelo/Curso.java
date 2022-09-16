@@ -45,8 +45,20 @@ public class Curso{
 	public void adicionarModulo(Modulo m) {
 		curso_modulos.add(m);
 	}
+
+	public void removerModulo(Modulo m) {
+		curso_modulos.remove(m);
+	}
+
+	public void adicionarAluno(Aluno a) {
+		curso_alunos.add(a);
+	}
+
+	public void removerAluno(Aluno a) {
+		curso_alunos.remove(a);
+	}
 	
-	public void removerModulo(String nomeModulo) {
+	public void removerModuloByName(String nomeModulo) {
 		if (!curso_modulos.isEmpty()) {
 			for (Modulo m : curso_modulos) {
 				if (m.getNome() == nomeModulo) {

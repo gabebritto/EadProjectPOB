@@ -11,8 +11,7 @@ import java.util.List;
 import com.db4o.ObjectContainer;
 import com.db4o.query.Query;
 
-import modelo.Autor;
-import modelo.Livro;
+import modelo.*;
 
 public class Listar {
 	protected ObjectContainer manager;
@@ -24,20 +23,20 @@ public class Listar {
 	}
 
 	public void listar(){
-		System.out.println("-------Lista de Livros--------");
+		System.out.println("-------Lista de Alunos--------");
 		Query q = manager.query();
-		q.constrain(Livro.class);  				
-		List<Livro> resultados = q.execute();
-		for (Livro liv : resultados ) {
-			System.out.println(liv);
+		q.constrain(Aluno.class);  				
+		List<Aluno> resultados = q.execute();
+		for (Aluno aluno : resultados ) {
+			System.out.println(aluno);
 		}
 		
-		System.out.println("\n-------Lista de Autores--------");
+		System.out.println("\n-------Lista de Cursos--------");
 		Query q2 = manager.query();
-		q2.constrain(Autor.class);  				
-		List<Autor> resultados2 = q2.execute();
-		for (Autor aut : resultados2 ) {
-			System.out.println(aut);
+		q2.constrain(Curso.class);  				
+		List<Curso> resultados2 = q2.execute();
+		for (Curso curso : resultados2 ) {
+			System.out.println(curso);
 		}
 	}
 
