@@ -24,7 +24,7 @@ public class Cadastrar {
 		
 		Curso curso = new Curso("Java", 1000);
 		Modulo modulo = new Modulo("Primeiro Modulo", curso);
-		Aula aula = new Aula("Aula 1", 10, professor1);
+		Aula aula = new Aula("Aula 1", 10, professor1, modulo);
 		
 		aluno1.adicionarCurso(curso);
 		//Inserir modulo no Curso
@@ -44,6 +44,14 @@ public class Cadastrar {
 	
 		//persistir curso
 		manager.store(curso);
+		manager.commit();
+
+		//persistir modulo
+		manager.store(modulo);
+		manager.commit();
+
+		//persistir aula
+		manager.store(aula);
 		manager.commit();
 
 	}

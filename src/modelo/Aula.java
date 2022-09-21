@@ -7,12 +7,22 @@ public class Aula {
 	private	String nome;
 	private int duracao;
 	private Professor professor;
+	private Modulo modulo;
 	private List<View> views_aula = new ArrayList<>();
 	
-	public Aula(String nome, int duracao, Professor professor) {
+	public Aula(String nome, int duracao, Professor professor, Modulo modulo) {
 		this.nome = nome;
 		this.duracao = duracao;
 		this.professor = professor;
+		this.modulo = modulo;
+	}
+
+	public Modulo getModulo() {
+		return modulo;
+	}
+
+	public void setModulo(Modulo novoModulo) {
+		this.modulo = novoModulo;
 	}
 	
 	public String getNome() {

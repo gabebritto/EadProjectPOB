@@ -1,10 +1,4 @@
 package aplicacao;
-/**********************************
- * IFPB - Curso Superior de Tec. em Sist. para Internet
- * POB - Persistencia de Objetos
- * Prof. Fausto Ayres
- *
- */
 
 import java.util.List;
 
@@ -28,6 +22,8 @@ public class Consultar {
 	}
 
 	public void consultar(){
+
+		// 1º Situação
 		System.out.println("\n---listar aula com professor João");
 		
 		Query q = manager.query();
@@ -38,25 +34,33 @@ public class Consultar {
 		for(Aula aula: resultados)
 			System.out.println(aula);
 		
-		// System.out.println("\n---listar livro com autor que tambem pertence ao livro c");
-	
-		// Query q2 = manager.query();
-		// q2.constrain(Livro.class);  
-		// q2.descend("autores").descend("livros").descend("titulo").constrain("c");
-		// q2.descend("titulo").constrain("c").not();
+		// 2º Situação
+		System.out.println("\n----Listar Aluno com aula que tenha o professor joão");
+
+		Query q2 = manager.query();
+		q2.constrain(Aluno.class);
+		q2.descend("cursos").descend("curso_modulos")
+							.descend("aulas_modulo")
+							.descend("professor")
+							.constrain("João");
 		
-		// resultados = q2.execute();
-		// for(Livro livro: resultados)
-		// 	System.out.println(livro);
+		List<Aluno> resultados2 = q2.execute();
+		for( Aluno aluno : resultados2)
+			System.out.println(aluno);
 		
-		// System.out.println("\n---listar livros sem autor");
-		// Query q3 = manager.query();
-		// q3.constrain(Livro.class);  
-		// q3.constrain(new Filtro());
-		
-		// resultados = q3.execute();
-		// for(Livro livro: resultados)
-		// 	System.out.println(livro);
+
+		System.out.println("\n----Listar Professor com modulo da aula chamado Primeiro Modulo");
+
+		Query q3 = manager.query();
+		q3.constrain(Professor.class);
+		q3.descend("aulas_professor").descend("modulo")
+										.descend("nome")
+										.constrain("Primeiro Modulo");
+
+		List<Professor> resultados3 = q3.execute();
+		for (Professor p : resultados3)
+			System.out.println(p);
+
 		
 	}
 	
