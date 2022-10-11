@@ -26,14 +26,19 @@ public class Cadastrar {
 		Modulo modulo = new Modulo("Primeiro Modulo", curso);
 		Aula aula = new Aula("Aula 1", 10, professor1, modulo);
 		
+		//Inserir curso no aluno
 		aluno1.adicionarCurso(curso);
+		//Inserir Aluno no Curso
+		curso.adicionarAluno(aluno1);
 		//Inserir modulo no Curso
 		curso.adicionarModulo(modulo);
 		//Inserir aula no modulo
 		modulo.adicionarAula(aula);
 		//Criar uma View para aula
 		aula.assistirAula(aluno1.getMatricula(), aula.getNome());
-
+		//Adicionar Aula ao professor
+		professor1.adicionarAulaProfessor(aula);
+		
 		//persistir aluno
 		manager.store(aluno1);
 		manager.commit();

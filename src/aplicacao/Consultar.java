@@ -3,8 +3,6 @@ package aplicacao;
 import java.util.List;
 
 import com.db4o.ObjectContainer;
-import com.db4o.query.Candidate;
-import com.db4o.query.Evaluation;
 import com.db4o.query.Query;
 
 import modelo.*;
@@ -35,14 +33,12 @@ public class Consultar {
 			System.out.println(aula);
 		
 		// 2º Situação
-		System.out.println("\n----Listar Aluno com aula que tenha o professor joão");
+		System.out.println("\n----Listar Aluno com modulo chamado Primeiro Modulo");
 
 		Query q2 = manager.query();
 		q2.constrain(Aluno.class);
-		q2.descend("cursos").descend("curso_modulos")
-							.descend("aulas_modulo")
-							.descend("professor")
-							.constrain("João");
+		q2.descend("cursos").descend("curso_modulos").descend("nome").constrain("Primeiro Modulo");
+							
 		
 		List<Aluno> resultados2 = q2.execute();
 		for( Aluno aluno : resultados2)
@@ -53,9 +49,8 @@ public class Consultar {
 
 		Query q3 = manager.query();
 		q3.constrain(Professor.class);
-		q3.descend("aulas_professor").descend("modulo")
-										.descend("nome")
-										.constrain("Primeiro Modulo");
+		q3.descend("aulas_professor").descend("modulo").descend("nome").constrain("Primeiro Modulo");
+										
 
 		List<Professor> resultados3 = q3.execute();
 		for (Professor p : resultados3)
@@ -68,17 +63,3 @@ public class Consultar {
 		new Consultar();
 	}
 }
-
-//classe interna 
-class Filtro implements Evaluation {
-	public void evaluate(Candidate candidate) {
-		//destacar o objeto que esta sendo consultado no banco
-		Aula aula = (Aula) candidate.getObject();
-		
-		if(aula.getProfessor() == null) 
-			candidate.include(true); 	//incluir objeto no resultado da consulta
-		else		
-			candidate.include(false);	//excluir objeto do resultado da consulta
-	}
-}
-
