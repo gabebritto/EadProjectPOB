@@ -8,7 +8,8 @@ public class Aula {
 	private int duracao;
 	private Professor professor;
 	private Modulo modulo;
-	private List<View> views_aula = new ArrayList<>();
+	private List<Aluno> alunos_aula = new ArrayList<>();
+	private int views_aula;
 	
 	public Aula(String nome, int duracao, Professor professor, Modulo modulo) {
 		this.nome = nome;
@@ -49,25 +50,39 @@ public class Aula {
 		professor = novoProfessor;
 	}
 	
-	public List<View> getViews() {
+	public int getViews() {
 		return views_aula;
 	}
 	
-	public void assistirAula(String matricula_aluno, String aula_nome) {
-		View novaView = new View(matricula_aluno, aula_nome);
-		views_aula.add(novaView);
+	public void assistirAula() {
+		views_aula++;
+	}
+	
+	public List<Aluno> getAlunos() {
+		return alunos_aula;
+	}
+
+	public void setAlunos_aula(List<Aluno> alunos_aula) {
+		this.alunos_aula = alunos_aula;
+	}
+	
+	public void adicionarAluno(Aluno aluno) {
+		alunos_aula.add(aluno);
+	}
+	
+	public void removerAluno(Aluno aluno) {
+		alunos_aula.remove(aluno);
 	}
 	
 	public String toString() {
-		String texto="Nome: " + getNome() + " Duração: " + getDuracao() + " Views: " + getViews();
-		if (views_aula.isEmpty())
+		String texto="Nome: " + getNome() + " Duração: " + getDuracao() + " Views: ";
+		if (views_aula == 0)
 			texto += "Sem Views";
 		else 	
-			for(View v: views_aula) 
-				texto += v.getAulaNome() + " - " + v.getMatriculaAluno() + ", "; 
+			texto += getViews();
 		return texto;
 
-	}	
+	}
 
 
 }

@@ -1,4 +1,4 @@
-package aplicacao;
+package appconsole;
 
 import java.util.List;
 

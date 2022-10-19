@@ -1,6 +1,7 @@
 package modelo;
 
 public class Pessoa {
+
 	private String cpf; 
 	private String nome;
 	
@@ -9,6 +10,7 @@ public class Pessoa {
 		this.cpf = cpf;
 		// TODO Auto-generated constructor stub
 	}
+
 
 	public String getNome() {
 		return nome;

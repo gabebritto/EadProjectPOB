@@ -1,4 +1,4 @@
-package aplicacao;
+package appconsole;
 
 import com.db4o.ObjectContainer;
 
@@ -35,7 +35,7 @@ public class Cadastrar {
 		//Inserir aula no modulo
 		modulo.adicionarAula(aula);
 		//Criar uma View para aula
-		aula.assistirAula(aluno1.getMatricula(), aula.getNome());
+		aula.assistirAula();
 		//Adicionar Aula ao professor
 		professor1.adicionarAulaProfessor(aula);
 		

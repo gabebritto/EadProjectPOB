@@ -3,13 +3,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Professor extends Pessoa {   
+public class Professor extends Pessoa {
+	private int id;
 	private int salario;
 	private List<Aula> aulas_professor = new ArrayList<>();
 
 	public Professor(String nome, String cpf, int salario) {
 		super(nome, cpf);
 		this.salario = salario;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	
+	public void setId(int novoId) {
+		id = novoId;
 	}
 	
 	public int getSalario() {

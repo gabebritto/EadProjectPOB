@@ -18,8 +18,8 @@ public class Curso{
 		return nome;
 	}
 	
-	public String setNome(String novoNome) {
-		return nome = novoNome;
+	public void setNome(String novoNome) {
+		nome = novoNome;
 	}
 	
 	public int getPreco() {
@@ -30,8 +30,8 @@ public class Curso{
 		return curso_modulos;
 	}
 	
-	public int setPreco(int novoPreco) {
-		return preco = novoPreco;
+	public void setPreco(int novoPreco) {
+		preco = novoPreco;
 	}
 
 	public List<Aluno> getAlunos() {
@@ -58,17 +58,28 @@ public class Curso{
 		curso_alunos.remove(a);
 	}
 	
-	public void removerModuloByName(String nomeModulo) {
+	public Modulo localizarModulo(String nomeModulo) {
 		if (!curso_modulos.isEmpty()) {
 			for (Modulo m : curso_modulos) {
-				if (m.getNome() == nomeModulo) {
-					curso_modulos.remove(m);
+				if (m.getNome().equals(nomeModulo)) {
+					return m;
 				}
 			}
 		}
-		else {
-			System.out.println("Modulo não encontrado!");
+		return null;
+	}
+	
+	public Aluno localizar(String nome){
+		for(Aluno a : curso_alunos){
+			if(a.getNome().equals(nome))
+				return a;
 		}
+		return null;
+	}
+	
+	public int totalGanho() {
+		int totalAlunos = curso_alunos.size();
+		return preco * totalAlunos;
 	}
 
 	@Override

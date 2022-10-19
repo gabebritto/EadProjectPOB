@@ -48,6 +48,14 @@ public class Modulo {
 		curso = novoCurso; 
 	}
 	
+	public void removerCurso() {
+		curso = null;
+	}
+	
+	public List<Aula> getAulas() {
+		return aulas_modulo;
+	}
+	
 	@Override
 	public String toString() {
 		String texto=" Nome: " + nome + " Curso: " + getCurso();
