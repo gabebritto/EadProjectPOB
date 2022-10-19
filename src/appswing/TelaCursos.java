@@ -39,6 +39,7 @@ public class TelaCursos {
 	private JScrollPane scrollPane;
 	private JButton button;
 	private JButton button_1;
+	private JButton button_3;
 	private JButton button_4;
 	private JButton button_2;
 	private JTextField textField_1;
@@ -136,6 +137,35 @@ public class TelaCursos {
 		button.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		button.setBounds(26, 278, 95, 23);
 		frame.getContentPane().add(button);
+		
+		button_3 = new JButton("Cursos c/ n Alunos");
+		button_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					
+					String qnt = JOptionPane.showInputDialog(frame,"Digite a quantidade de alunos");
+					if (qnt != null) { 
+						List<Curso> cursosConsultados = Fachada.consultarCursoNAlunos(Integer.parseInt(qnt));
+						String nomes= "Nomes dos cursos:";
+						for(Curso c : cursosConsultados)
+							nomes+="\n"+c.getNome() + " - " + c.getAlunos().size();
+	
+						JOptionPane.showMessageDialog(frame, nomes);
+					}
+
+				}
+				catch(NumberFormatException ex) {
+					label.setText("Valor inválido. Digite apenas números");
+				}
+				catch(Exception erro) {
+					label.setText(erro.getMessage());
+				}
+			}
+		});
+		
+		button_3.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		button_3.setBounds(435, 180, 140, 23);
+		frame.getContentPane().add(button_3);
 
 		button_1 = new JButton("Apagar");
 		button_1.addActionListener(new ActionListener() {
