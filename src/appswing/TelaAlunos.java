@@ -115,8 +115,9 @@ public class TelaAlunos {
 		table.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
 
 		label = new JLabel("");
+		label.setVerticalAlignment(SwingConstants.TOP);
 		label.setForeground(Color.BLUE);
-		label.setBounds(21, 315, 674, 20);
+		label.setBounds(21, 302, 674, 33);
 		frame.getContentPane().add(label);
 
 		label_6 = new JLabel("selecione");

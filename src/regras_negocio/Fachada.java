@@ -8,10 +8,10 @@ package regras_negocio;
 
 import java.util.List;
 
-import daodb4o.DAO;
-import daodb4o.DAOAluno;
-import daodb4o.DAOCurso;
-import daodb4o.DAOModulo;
+import daojpa.DAO;
+import daojpa.DAOAluno;
+import daojpa.DAOCurso;
+import daojpa.DAOModulo;
 import modelo.Aluno;
 import modelo.Curso;
 import modelo.Modulo;
@@ -347,8 +347,5 @@ public class Fachada {
 		return daocurso.consultarCursoNAlunos(n);
 	}
 	
-	public static int consultarTotalAlunos() {
-		return daoaluno.consultarTotalAlunos();
-	}
 
 }

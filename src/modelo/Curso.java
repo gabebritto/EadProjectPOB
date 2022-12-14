@@ -3,12 +3,36 @@ package modelo;
 import java.util.ArrayList;
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
+import jakarta.persistence.Version;
+
+@Entity
 public class Curso{
+	@Id
 	private String nome;
+	
 	private int preco;
+	
+	@ManyToMany(cascade={CascadeType.PERSIST,CascadeType.MERGE})
 	private List<Aluno> curso_alunos = new ArrayList<>();
+	
+	@OneToMany(	mappedBy="Curso",
+			cascade={CascadeType.PERSIST,CascadeType.MERGE}, 	
+			orphanRemoval=true,			
+			fetch=FetchType.EAGER) 			
 	private List<Modulo> curso_modulos = new ArrayList<>();
-		
+	
+	@Version
+	private long versao;
+	
+	public Curso() {}
+	
 	public Curso(String nome, int preco) {
 		this.nome = nome;
 		this.preco = preco;

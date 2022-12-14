@@ -3,25 +3,31 @@ package modelo;
 import java.util.ArrayList;
 import java.util.List;
 
+import jakarta.persistence.*;
+
+@Entity
 public class Aluno extends Pessoa {
-	private int id;
+	
 	private String matricula;
+	
+	@ManyToMany(mappedBy="curso_alunos", 
+			cascade={CascadeType.PERSIST,CascadeType.MERGE}) 	
 	private List<Curso> cursos = new ArrayList<Curso>();
+	
+	@ManyToMany(mappedBy="alunos_aula", 
+			cascade={CascadeType.PERSIST,CascadeType.MERGE}) 	
 	private List<Aula> aulas = new ArrayList<Aula>();
 	
+	@Version
+	private long versao;
+	
+	public Aluno() {}
 	
 	public Aluno(String nome, String cpf, String matricula) {
 		super(nome, cpf);
 		this.matricula = matricula;
 	}
 	
-	public int getId() {
-		return id;
-	}
-	
-	public void setId(int novoId) {
-		id = novoId;
-	}
 
 	public void adicionarCurso(Curso curso) {
 		cursos.add(curso);

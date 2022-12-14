@@ -1,0 +1,80 @@
+[EL Fine]: server: 2022-12-14 01:33:37.138--Thread(Thread[AWT-EventQueue-0,6,main])--Configured server platform: org.eclipse.persistence.platform.server.NoServerPlatform
+[EL Config]: metadata: 2022-12-14 01:33:37.221--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class modelo.Curso] is set to [FIELD].
+[EL Config]: metadata: 2022-12-14 01:33:37.233--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to many mapping element [field curso_alunos] is being defaulted to: class modelo.Aluno.
+[EL Config]: metadata: 2022-12-14 01:33:37.234--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to many mapping element [field curso_modulos] is being defaulted to: class modelo.Modulo.
+[EL Config]: metadata: 2022-12-14 01:33:37.235--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class modelo.Pessoa] is set to [FIELD].
+[EL Config]: metadata: 2022-12-14 01:33:37.235--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class modelo.Aluno] is set to [FIELD].
+[EL Config]: metadata: 2022-12-14 01:33:37.235--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to many mapping element [field cursos] is being defaulted to: class modelo.Curso.
+[EL Config]: metadata: 2022-12-14 01:33:37.235--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to many mapping element [field aulas] is being defaulted to: class modelo.Aula.
+[EL Config]: metadata: 2022-12-14 01:33:37.236--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class modelo.Professor] is set to [FIELD].
+[EL Config]: metadata: 2022-12-14 01:33:37.236--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to many mapping element [field aulas_professor] is being defaulted to: class modelo.Aula.
+[EL Config]: metadata: 2022-12-14 01:33:37.236--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class modelo.Aula] is set to [FIELD].
+[EL Config]: metadata: 2022-12-14 01:33:37.236--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field professor] is being defaulted to: class modelo.Professor.
+[EL Config]: metadata: 2022-12-14 01:33:37.236--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to many mapping element [field alunos_aula] is being defaulted to: class modelo.Aluno.
+[EL Config]: metadata: 2022-12-14 01:33:37.237--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field modulo] is being defaulted to: class modelo.Modulo.
+[EL Config]: metadata: 2022-12-14 01:33:37.237--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class modelo.Modulo] is set to [FIELD].
+[EL Config]: metadata: 2022-12-14 01:33:37.237--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field curso] is being defaulted to: class modelo.Curso.
+[EL Config]: metadata: 2022-12-14 01:33:37.237--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to many mapping element [field aulas_modulo] is being defaulted to: class modelo.Aula.
+[EL Config]: metadata: 2022-12-14 01:33:37.237--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class modelo.Curso] is being defaulted to: Curso.
+[EL Config]: metadata: 2022-12-14 01:33:37.238--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class modelo.Curso] is being defaulted to: CURSO.
+[EL Config]: metadata: 2022-12-14 01:33:37.244--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [preco] is being defaulted to: PRECO.
+[EL Config]: metadata: 2022-12-14 01:33:37.245--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [nome] is being defaulted to: NOME.
+[EL Config]: metadata: 2022-12-14 01:33:37.245--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [versao] is being defaulted to: VERSAO.
+[EL Config]: metadata: 2022-12-14 01:33:37.246--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class modelo.Aluno] is being defaulted to: Aluno.
+[EL Config]: metadata: 2022-12-14 01:33:37.246--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class modelo.Pessoa] is being defaulted to: Pessoa.
+[EL Config]: metadata: 2022-12-14 01:33:37.246--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class modelo.Pessoa] is being defaulted to: PESSOA.
+[EL Config]: metadata: 2022-12-14 01:33:37.247--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The discriminator column name for the root inheritance class [modelo.Pessoa] is being defaulted to: DTYPE.
+[EL Config]: metadata: 2022-12-14 01:33:37.247--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [cpf] is being defaulted to: CPF.
+[EL Config]: metadata: 2022-12-14 01:33:37.247--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [nome] is being defaulted to: NOME.
+[EL Config]: metadata: 2022-12-14 01:33:37.247--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2022-12-14 01:33:37.247--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [matricula] is being defaulted to: MATRICULA.
+[EL Config]: metadata: 2022-12-14 01:33:37.247--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [versao] is being defaulted to: VERSAO.
+[EL Config]: metadata: 2022-12-14 01:33:37.248--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class modelo.Professor] is being defaulted to: Professor.
+[EL Config]: metadata: 2022-12-14 01:33:37.248--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [salario] is being defaulted to: SALARIO.
+[EL Config]: metadata: 2022-12-14 01:33:37.248--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [versao] is being defaulted to: VERSAO.
+[EL Config]: metadata: 2022-12-14 01:33:37.248--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class modelo.Aula] is being defaulted to: Aula.
+[EL Config]: metadata: 2022-12-14 01:33:37.248--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class modelo.Aula] is being defaulted to: AULA.
+[EL Config]: metadata: 2022-12-14 01:33:37.248--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [views_aula] is being defaulted to: VIEWS_AULA.
+[EL Config]: metadata: 2022-12-14 01:33:37.248--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [nome] is being defaulted to: NOME.
+[EL Config]: metadata: 2022-12-14 01:33:37.248--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [duracao] is being defaulted to: DURACAO.
+[EL Config]: metadata: 2022-12-14 01:33:37.249--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [versao] is being defaulted to: VERSAO.
+[EL Config]: metadata: 2022-12-14 01:33:37.249--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class modelo.Modulo] is being defaulted to: Modulo.
+[EL Config]: metadata: 2022-12-14 01:33:37.249--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class modelo.Modulo] is being defaulted to: MODULO.
+[EL Config]: metadata: 2022-12-14 01:33:37.249--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [nome] is being defaulted to: NOME.
+[EL Config]: metadata: 2022-12-14 01:33:37.249--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [versao] is being defaulted to: VERSAO.
+[EL Config]: metadata: 2022-12-14 01:33:37.257--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The join table name for the many to many mapping [field curso_alunos] is being defaulted to: CURSO_PESSOA.
+[EL Config]: metadata: 2022-12-14 01:33:37.258--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The source primary key column name for the many to many mapping [field curso_alunos] is being defaulted to: NOME.
+[EL Config]: metadata: 2022-12-14 01:33:37.258--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The source foreign key column name for the many to many mapping [curso_alunos] is being defaulted to: cursos_NOME.
+[EL Config]: metadata: 2022-12-14 01:33:37.258--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The target primary key column name for the many to many mapping [field curso_alunos] is being defaulted to: ID.
+[EL Config]: metadata: 2022-12-14 01:33:37.258--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The target foreign key column name for the many to many mapping [curso_alunos] is being defaulted to: curso_alunos_ID.
+[EL Config]: metadata: 2022-12-14 01:33:37.261--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field professor] is being defaulted to: ID.
+[EL Config]: metadata: 2022-12-14 01:33:37.261--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [professor] is being defaulted to: PROFESSOR_ID.
+[EL Config]: metadata: 2022-12-14 01:33:37.261--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The join table name for the many to many mapping [field alunos_aula] is being defaulted to: AULA_PESSOA.
+[EL Config]: metadata: 2022-12-14 01:33:37.261--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The source primary key column name for the many to many mapping [field alunos_aula] is being defaulted to: NOME.
+[EL Config]: metadata: 2022-12-14 01:33:37.261--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The source foreign key column name for the many to many mapping [alunos_aula] is being defaulted to: aulas_NOME.
+[EL Config]: metadata: 2022-12-14 01:33:37.261--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The target primary key column name for the many to many mapping [field alunos_aula] is being defaulted to: ID.
+[EL Config]: metadata: 2022-12-14 01:33:37.261--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The target foreign key column name for the many to many mapping [alunos_aula] is being defaulted to: alunos_aula_ID.
+[EL Config]: metadata: 2022-12-14 01:33:37.262--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field modulo] is being defaulted to: NOME.
+[EL Config]: metadata: 2022-12-14 01:33:37.262--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [modulo] is being defaulted to: MODULO_NOME.
+[EL Config]: metadata: 2022-12-14 01:33:37.262--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field curso] is being defaulted to: NOME.
+[EL Config]: metadata: 2022-12-14 01:33:37.262--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [curso] is being defaulted to: CURSO_NOME.
+[EL Info]: 2022-12-14 01:33:37.315--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--EclipseLink, version: Eclipse Persistence Services - 3.1.0-M1.v202108080909
+[EL Fine]: connection: 2022-12-14 01:33:37.492--Thread(Thread[AWT-EventQueue-0,6,main])--Detected database platform: org.eclipse.persistence.platform.database.PostgreSQLPlatform
+[EL Fine]: connection: 2022-12-14 01:33:37.495--ServerSession(361615359)--Connection(1835187801)--Thread(Thread[AWT-EventQueue-0,6,main])--connecting(DatabaseLogin(
+	platform=>PostgreSQLPlatform
+	user name=> "postgres"
+	datasource URL=> "jdbc:postgresql://localhost:5432/ead"
+))
+[EL Config]: connection: 2022-12-14 01:33:37.534--ServerSession(361615359)--Connection(903599609)--Thread(Thread[AWT-EventQueue-0,6,main])--Connected: jdbc:postgresql://localhost:5432/ead
+	User: postgres
+	Database: PostgreSQL  Version: 15.1
+	Driver: PostgreSQL JDBC Driver  Version: 42.5.0
+[EL Fine]: connection: 2022-12-14 01:33:37.555--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--/file:/C:/Users/gabri/Documents/EadProjectPOB/target/classes/_eclipselink_url=jdbc:postgresql://localhost:5432/ead_user=postgres login successful
+[EL Fine]: sql: 2022-12-14 01:33:37.848--ServerSession(361615359)--Connection(903599609)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT NOME, PRECO, VERSAO FROM CURSO ORDER BY NOME
+[EL Fine]: sql: 2022-12-14 01:33:42.527--ServerSession(361615359)--Connection(903599609)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, DTYPE, CPF, NOME, MATRICULA, VERSAO FROM PESSOA WHERE (DTYPE = ?)
+	bind => [Aluno]
+[EL Fine]: sql: 2022-12-14 01:33:42.532--ServerSession(361615359)--Connection(903599609)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT t1.NOME, t1.PRECO, t1.VERSAO FROM CURSO_PESSOA t0, CURSO t1 WHERE ((t0.curso_alunos_ID = ?) AND (t1.NOME = t0.cursos_NOME))
+	bind => [1]
+[EL Fine]: connection: 2022-12-14 01:33:43.967--ServerSession(361615359)--Connection(903599609)--Thread(Thread[AWT-EventQueue-0,6,main])--disconnect
+[EL Fine]: connection: 2022-12-14 01:33:43.968--ServerSession(361615359)--Thread(Thread[AWT-EventQueue-0,6,main])--/file:/C:/Users/gabri/Documents/EadProjectPOB/target/classes/_eclipselink_url=jdbc:postgresql://localhost:5432/ead_user=postgres logout successful
+[EL Fine]: connection: 2022-12-14 01:33:43.968--ServerSession(361615359)--Connection(1835187801)--Thread(Thread[AWT-EventQueue-0,6,main])--disconnect

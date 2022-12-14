@@ -1,9 +1,24 @@
 package modelo;
 
-public class Pessoa {
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Inheritance;
+import jakarta.persistence.InheritanceType;
+
+
+@Entity 
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+public class Pessoa {
+	@Id		
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int id;
 	private String cpf; 
 	private String nome;
+	
+	public Pessoa (){}
 	
 	public Pessoa(String nome, String cpf) {
 		this.nome = nome;
@@ -11,7 +26,14 @@ public class Pessoa {
 		// TODO Auto-generated constructor stub
 	}
 
-
+	public int getId() {
+		return id;
+	}
+	
+	public void setId(int novoId) {
+		id = novoId;
+	}
+	
 	public String getNome() {
 		return nome;
 	}

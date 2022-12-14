@@ -2,25 +2,34 @@ package modelo;
 import java.util.ArrayList;
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
+import jakarta.persistence.Version;
 
+@Entity
 public class Professor extends Pessoa {
-	private int id;
+
 	private int salario;
+	
+	@OneToMany(	mappedBy="Professor",
+			cascade={CascadeType.PERSIST,CascadeType.MERGE}, 	
+			orphanRemoval=true,			
+			fetch=FetchType.EAGER) 	
 	private List<Aula> aulas_professor = new ArrayList<>();
 
+	@Version
+	private long versao;
+	
+	public Professor() {}
+	
 	public Professor(String nome, String cpf, int salario) {
 		super(nome, cpf);
 		this.salario = salario;
 	}
-	
-	public int getId() {
-		return id;
-	}
-	
-	public void setId(int novoId) {
-		id = novoId;
-	}
-	
+
 	public int getSalario() {
 		return salario;
 	}

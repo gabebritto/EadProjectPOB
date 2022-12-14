@@ -1,15 +1,40 @@
 package modelo;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import jakarta.persistence.Version;
+
+@Entity
 public class Aula {
+	@Id
 	private	String nome;
+	
 	private int duracao;
+	
+	@ManyToOne
 	private Professor professor;
+	
+	@ManyToOne
 	private Modulo modulo;
+	
+	//*:*
+	@ManyToMany(cascade={CascadeType.PERSIST,CascadeType.MERGE})
 	private List<Aluno> alunos_aula = new ArrayList<>();
+	
 	private int views_aula;
+	
+	@Version
+	private long versao;
+	
+	public Aula() {}
 	
 	public Aula(String nome, int duracao, Professor professor, Modulo modulo) {
 		this.nome = nome;
